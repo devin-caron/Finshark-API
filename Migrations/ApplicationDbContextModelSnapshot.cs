@@ -48,7 +48,7 @@ namespace Finshark_api.Migrations
 
                     b.HasIndex("StockId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Finshark_api.Models.Stock", b =>
@@ -82,7 +82,7 @@ namespace Finshark_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Stock");
+                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("Finshark_api.Models.Comment", b =>

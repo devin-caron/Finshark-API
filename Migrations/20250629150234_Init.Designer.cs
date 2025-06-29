@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Finshark_api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250628173617_init")]
-    partial class init
+    [Migration("20250629150234_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,7 @@ namespace Finshark_api.Migrations
 
                     b.HasIndex("StockId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Finshark_api.Models.Stock", b =>
@@ -85,7 +85,7 @@ namespace Finshark_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Stock");
+                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("Finshark_api.Models.Comment", b =>
