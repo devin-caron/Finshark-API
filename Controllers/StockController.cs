@@ -1,4 +1,5 @@
 ﻿using Finshark_api.Data;
+using Finshark_api.Dtos.Stock;
 using Finshark_api.Mappers;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,6 +35,15 @@ namespace Finshark_api.Controllers
             }
 
             return Ok(stock.ToStockDto());
+        }
+
+        [HttpPost]
+        public IActionResult Create([FromBody] CreateStockRequestDto stockDto)
+        {
+            var stockModel = stockDto.ToStockFromCreateDto();
+            _context.Stocks.Add(stockModel);
+            _context.SaveChanges();
+            return CreatedAtAction(nameof(GetById), new { id = stockModel.Id }, stockModel.ToStockDto());
         }
     }
 }
