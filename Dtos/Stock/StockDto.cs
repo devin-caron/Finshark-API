@@ -1,4 +1,6 @@
-﻿namespace Finshark_api.Dtos.Stock
+﻿using Finshark_api.Dtos.Comment;
+
+namespace Finshark_api.Dtos.Stock
 {
     public class StockDto
     {
@@ -9,5 +11,6 @@
         public decimal LastDiv { get; set; }
         public string Industry { get; set; } = string.Empty;
         public long MarketCap { get; set; }
+        public List<CommentDto> Comments { get; set; }
     }
 }
