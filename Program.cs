@@ -1,4 +1,6 @@
 using Finshark_api.Data;
+using Finshark_api.Interfaces;
+using Finshark_api.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 // before builder
+
+builder.Services.AddScoped<IStockRepository, StockRepository>();
 
 var app = builder.Build();
 
