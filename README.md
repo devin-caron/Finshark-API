@@ -1,4 +1,4 @@
-Finshark API is a stock portfolio tracker build in ASP.NET Core Web API with C#. This backend application allows users to sign up and keep a list of their stock holdings and leave comments on each stock.
+Finshark API is a stock portfolio tracker built in ASP.NET Core Web API with C#. This backend application allows users to sign up and keep a list of their stock holdings and leave comments on each stock.
 
 - Developed a RESTful API using C# and ASP.NET Core Web API to allow users to track and manage their current stock holdings
 - Implemented CRUD operations for stocks and comments, enabling users to add, update, view, and delete stock entries and comments
